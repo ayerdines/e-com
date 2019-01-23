@@ -10,6 +10,37 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require_tree .
  */
+
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+$hamburger-padding-x: 0px;
+$hamburger-padding-y: 0px;
+$hamburger-layer-width: 30px !default;
+$hamburger-layer-height: 3px !default;
+$hamburger-layer-spacing: 6px !default;
+$hamburger-layer-border-radius: 3px !default;
+@import "../../../lib/assets/hamburgers.scss";
+
+body {
+	font-family: 'Quicksand', sans-serif;
+	margin: 93px 0px 0px 0px;
+	padding: 0;
+	font-weight: 200;
+	background-color: white;
+	color: black;
+}
+
+header {
+	z-index: 1;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	background-color: #f2f2f2;
+}
+
+main {
+	overflow: hidden;
+}

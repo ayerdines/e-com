@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ECom</title>
+    <title>Worst Deals</title>
+    <link rel="icon" type="image/png" href="<%= asset_path('favico.png') %>">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="wd-lobby container-fluid text-center">
+        <div class="hamburger hamburger--squeeze" type="button">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
+        Worst Deals
+      </div>
+      <section class="wd-navigation-section">
+        <nav id="sticky-navigation-bar" class="nav justify-content-center">
+          <a class="nav-link disabled" href="">Lobby</a>
+          <a class="nav-link disabled" href="">Tech Reviews</a>
+          <a class="nav-link disabled" href="">News/Announcements</a>
+          <a class="nav-link disabled" href="">Trending</a>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <section class="wd-sidebar">
+        <nav id="sticky-sidebar" class="nav flex-column">
+          <a class="nav-link" href="#"><span class="ml-30">Active</span></a>
+          <a class="nav-link" href="#"><span class="ml-30">Link</span></a>
+          <a class="nav-link" href="#"><span class="ml-30">Link</span></a>
+          <a class="nav-link" href="#"><span class="ml-30">Disabled</span></a>
+        </nav>
+      </section>
+      <%= yield %>
+    </main>
+    <footer>
+      
+    </footer>
   </body>
 </html>
